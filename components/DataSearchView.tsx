@@ -437,11 +437,7 @@ const DataSearchView: React.FC<DataSearchViewProps> = ({ onBack, onOrder }) => {
                 <img src={ds.image} alt={ds.title} className="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110 opacity-70 group-hover:opacity-100" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1e293b] via-transparent to-transparent opacity-90" />
                 
-                {/* Meta Badge */}
-                <div className="absolute top-4 left-4 flex items-center space-x-2 bg-slate-900/60 backdrop-blur-xl border border-white/10 px-3 py-1 rounded-full">
-                   <div className={`w-1.5 h-1.5 rounded-full animate-pulse ${ds.type === 'thematic' ? 'bg-emerald-500' : 'bg-blue-500'}`} />
-                   <span className="text-[10px] font-black text-white uppercase tracking-widest">{ds.tags[0]}</span>
-                </div>
+                {/* Meta Badge Removed Here */}
               </div>
 
               {/* Card Info Section */}

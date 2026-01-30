@@ -145,10 +145,6 @@ const AlgorithmDetailView: React.FC<AlgorithmDetailViewProps> = ({ onBack, onBuy
             <div className="space-y-4 flex-1 pr-48"> {/* Padding for absolute buttons */}
               <div className="flex flex-wrap items-center gap-4">
                 <h1 className="text-3xl md:text-4xl font-black text-white tracking-tighter">归一化植被指数(NDVI)计算</h1>
-                <div className="flex items-center space-x-1.5 bg-green-500/10 text-green-400 text-[10px] font-black px-3 py-1 rounded-full border border-green-500/20 uppercase tracking-widest">
-                  <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                  <span>已发布 ONLINE</span>
-                </div>
               </div>
               <p className="text-gray-400 font-light max-w-4xl text-lg leading-relaxed">
                 基于遥感影像的归一化植被指数计算算法，用于评估植被生长状态和覆盖度。支持Landsat-8/9、Sentinel-2、MODIS等多源遥感数据，平均执行时间2.3秒/帧，成功率99.2%。
@@ -406,22 +402,6 @@ const AlgorithmDetailView: React.FC<AlgorithmDetailViewProps> = ({ onBack, onBuy
                             <div className={`text-2xl font-black ${stat.highlight || 'text-white'}`}>{stat.value}</div>
                           </div>
                         ))}
-                      </div>
-
-                      <div className="flex items-center justify-between pt-4">
-                        <div className="flex items-center space-x-4">
-                           <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/5">
-                              <Users size={18} className="text-gray-500" />
-                           </div>
-                           <div className="space-y-0.5">
-                              <div className="text-[10px] text-gray-500 font-bold uppercase tracking-widest">合作单位</div>
-                              <div className="text-sm font-black text-gray-300">{item.partner}</div>
-                           </div>
-                        </div>
-                        <button className="flex items-center space-x-2 text-blue-500 group/btn font-black transition-all hover:text-blue-400">
-                           <span className="text-sm">查看详情</span>
-                           <ArrowRight size={18} className="group-hover/btn:translate-x-2 transition-transform duration-300" />
-                        </button>
                       </div>
                     </div>
                   </div>

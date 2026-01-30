@@ -4,7 +4,7 @@ import {
   Search, 
   ChevronDown, 
   Heart, 
-  ArrowRight,
+  ArrowRight, 
   Filter,
   BrainCircuit,
   Eye,
@@ -416,12 +416,6 @@ const ServiceCenterView: React.FC<ServiceCenterViewProps> = ({ onEnterDetail }) 
               <div className="h-48 relative overflow-hidden shrink-0 bg-slate-900">
                 <img src={algo.image} alt={algo.title} className="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110 opacity-70 group-hover:opacity-100" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1e293b] via-transparent to-transparent opacity-90" />
-                
-                {/* Accuracy Badge */}
-                <div className="absolute top-4 left-4 flex items-center space-x-2 bg-slate-900/60 backdrop-blur-xl border border-white/10 px-3 py-1 rounded-full">
-                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                   <span className="text-[10px] font-black text-white uppercase tracking-widest">精度: {algo.accuracy}</span>
-                </div>
               </div>
 
               {/* Card Info Section */}
