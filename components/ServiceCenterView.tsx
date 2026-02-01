@@ -121,7 +121,7 @@ const ServiceCenterView: React.FC<ServiceCenterViewProps> = ({ onEnterDetail }) 
   const [activeCategory, setActiveCategory] = useState('全部');
   const [activeField, setActiveField] = useState('全部');
   const [searchFocused, setSearchFocused] = useState(false);
-  const [sortOption, setSortOption] = useState('最新热度');
+  const [sortOption, setSortOption] = useState('最多点击');
 
   // Sticky header state
   const [showStickyHeader, setShowStickyHeader] = useState(false);
@@ -390,7 +390,7 @@ const ServiceCenterView: React.FC<ServiceCenterViewProps> = ({ onEnterDetail }) 
                 <ChevronDown size={18} className="text-slate-400 group-hover/sort:text-indigo-400 transition-colors" />
               </div>
               <div className="absolute right-0 top-full mt-2 w-40 bg-[#1e293b] border border-slate-700 rounded-xl shadow-2xl overflow-hidden opacity-0 invisible group-hover/sort:opacity-100 group-hover/sort:visible transition-all duration-200 transform origin-top">
-                {['最新热度', '最多点击'].map((opt) => (
+                {['最多点击', '最新发布'].map((opt) => (
                   <div 
                     key={opt}
                     onClick={() => setSortOption(opt)}

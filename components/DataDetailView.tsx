@@ -126,12 +126,6 @@ const DataDetailView: React.FC<DataDetailViewProps> = ({ dataset, onBack, onBack
                    <div className="px-3 py-1 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-black uppercase tracking-widest">
                       {isThematic ? '专题产品' : '标准影像'}
                    </div>
-                   {dataset.authorized && (
-                      <div className="px-3 py-1 rounded-lg bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-black uppercase tracking-widest flex items-center space-x-1">
-                         <CheckCircle2 size={12} />
-                         <span>已授权</span>
-                      </div>
-                   )}
                 </div>
                 <h1 className="text-5xl font-black text-white tracking-tight leading-tight">{dataset.title}</h1>
                 <p className="text-gray-400 text-lg leading-relaxed font-light max-w-3xl">

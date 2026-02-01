@@ -107,7 +107,7 @@ const AppCenterView: React.FC<AppCenterViewProps> = ({ onEnterDetail }) => {
   const [activeCategory, setActiveCategory] = useState('全部');
   const [activeFeature, setActiveFeature] = useState('全部');
   const [searchFocused, setSearchFocused] = useState(false);
-  const [sortOption, setSortOption] = useState('最新发布');
+  const [sortOption, setSortOption] = useState('最多点击');
   
   // Sticky header state
   const [showStickyHeader, setShowStickyHeader] = useState(false);
@@ -228,8 +228,8 @@ const AppCenterView: React.FC<AppCenterViewProps> = ({ onEnterDetail }) => {
                                 onClick={() => setActiveFeature(feat)}
                                 className={`px-4 py-2 rounded-lg text-xs font-medium transition-all ${
                                     activeFeature === feat 
-                                    ? 'bg-blue-800 text-white shadow-md shadow-blue-900/40' 
-                                    : 'bg-[#1e293b] text-slate-400 hover:text-white hover:bg-white/10 border border-transparent'
+                                    ? 'bg-blue-800 text-white font-bold shadow-lg shadow-blue-900/40' 
+                                    : 'bg-[#1e293b]/40 text-slate-400 hover:text-white hover:bg-[#1e293b]/80 border border-transparent hover:border-white/5'
                                 }`}
                             >
                                 {feat}
@@ -377,7 +377,7 @@ const AppCenterView: React.FC<AppCenterViewProps> = ({ onEnterDetail }) => {
                   <ChevronDown size={16} className="text-slate-400 group-hover/sort:text-indigo-400 transition-colors" />
                 </div>
                 <div className="absolute right-0 top-full mt-2 w-40 bg-[#1e293b] border border-slate-700 rounded-xl shadow-2xl overflow-hidden opacity-0 invisible group-hover/sort:opacity-100 group-hover/sort:visible transition-all duration-200 transform origin-top">
-                    {['最新发布', '最多使用', '评分最高'].map((opt) => (
+                    {['最多点击', '最新发布'].map((opt) => (
                       <div 
                         key={opt}
                         onClick={() => setSortOption(opt)}
